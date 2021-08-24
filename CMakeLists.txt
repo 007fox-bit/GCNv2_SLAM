@@ -7,6 +7,9 @@ MESSAGE("Build type: " ${CMAKE_BUILD_TYPE})
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O3 -march=native ")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -march=native")
 
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 #Check C++11 or C++0x support
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
@@ -96,3 +99,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/GCN2)
 add_executable(rgbd_gcn GCN2/rgbd_gcn.cc)
 target_link_libraries(rgbd_gcn ${PROJECT_NAME} ${TORCH_LIBRARIES})
 set_property(TARGET rgbd_gcn PROPERTY CXX_STANDARD 11)
+
+
+
+
+
