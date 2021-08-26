@@ -28,13 +28,13 @@ We use the new thread and chrono functionalities of C++11.
 We use [Pytorch](https://github.com/pytorch/pytorch) C++ api(libtorch) for deloying the GCNv2. 
 The libtorch can be built as follows:
 ```
-git clone --recursive -b v1.0.1 https://github.com/pytorch/pytorch
+git clone --recursive -b v1.9.0 https://github.com/pytorch/pytorch
 cd pytorch && mkdir build && cd build
 python ../tools/build_libtorch.py
 ```
 The built libtorch library is located at ```pytorch/torch/lib/tmp_install/``` in default.
 
-**Update: Have added support for master branch of pytorch or version larger than 1.0.1. For newer version, set ```TORCH_PATH``` to ```pytorch/torch/share/cmake/Torch```**
+**Update: For 1.9.0 version, set ```TORCH_PATH``` to ```pytorch/torch/share/cmake/Torch```**
 
 **Required at least 1.0.1. Lower version of pytorch has cuDNN linking issue:https://github.com/pytorch/pytorch/issues/14033#issuecomment-455046353.**
 
