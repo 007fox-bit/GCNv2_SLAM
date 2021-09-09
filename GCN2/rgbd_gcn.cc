@@ -43,6 +43,11 @@ int main(int argc, char **argv)
         return 1;
     }
 
+     torch::DeviceType device_type;
+     if (torch::cuda::cudnn_is_available()) {
+		std::cout << "cudnn_is_available" << std::endl;
+	}
+
     // Retrieve paths to images
     vector<string> vstrImageFilenamesRGB;
     vector<string> vstrImageFilenamesD;
